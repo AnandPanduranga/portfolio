@@ -1,0 +1,317 @@
+1) Difference between HTTP and HTTPS.
+
+| Feature.                                                                          | HTTPS.                 HTTP.                         |
+| ------------------- | ------------------------------------------------------------ | ---------------------------------------------- |
+| **Full Form**       | HyperText Transfer Protocol                                  | HyperText Transfer Protocol Secure             |
+| **Security**        | Not secure                                                   | Secure                                         |
+| **Data Encryption** | Data is sent in plain text                                   | Data is encrypted using SSL/TLS                |
+| **Risk**            | Vulnerable to hacking, data theft, man-in-the-middle attacks | Protects against hacking and data interception |
+| **Port Number**     | Uses port **80**                                             | Uses port **443**                              |
+| **Certificate**     | No certificate required                                      | Requires **SSL/TLS certificate**               |
+| **URL Prefix**      | `http://`                                                    | `https://`                                     |
+| **SEO Ranking**     | Lower priority in search engines                             | Preferred by search engines (better SEO)       |
+| **Use Case**        | Non-sensitive data (rarely used now)                         | Login pages, payments, personal data           |
+
+
+2) Define web Arithmetic and DNS.
+
+Web Arithmetic
+
+Web Arithmetic refers to performing mathematical calculations on the web using programming languages like JavaScript.
+It involves using arithmetic operators to calculate values in web pages, such as totals, percentages, counters, and validations.
+
+Common Arithmetic Operators in Web (JavaScript):
+
++ → Addition
+
+- → Subtraction
+
+* → Multiplication
+
+/ → Division
+
+% → Modulus (remainder)
+
+Example:
+
+let a = 10;
+let b = 5;
+console.log(a + b); // Output: 15
+
+Use:
+Used in calculators, billing systems, form validation, scores, and dynamic web applications.
+
+DNS (Domain Name System)
+
+DNS is a system that converts human-readable domain names into IP addresses so that browsers can locate websites on the internet.
+
+Example:
+
+www.google.com → 142.250.183.206
+
+Why DNS is needed:
+
+Computers understand IP addresses
+
+Humans remember domain names
+
+DNS acts like the internet’s phone book
+
+Main Functions of DNS:
+
+Translates domain names to IP addresses
+
+Helps locate servers quickly
+
+Enables smooth web browsing 
+
+3) Difference between ARIA and WAI ARIA.
+
+| Aspect        | ARIA                                                                   | WAI-ARIA                                                             |
+| ------------- | ---------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| **Full Form** | Accessible Rich Internet Applications                                  | Web Accessibility Initiative – Accessible Rich Internet Applications |
+| **Meaning**   | Refers to accessibility roles, states, and properties used in web apps | Official **specification/standard** created by W3C for ARIA          |
+| **Scope**     | General term used by developers                                        | Formal framework under **W3C’s WAI**                                 |
+| **Authority** | Not an organization                                                    | Developed and maintained by **W3C (WAI)**                            |
+| **Usage**     | Informal or short reference                                            | Official and correct terminology                                     |
+| **Purpose**   | Makes web content accessible to assistive technologies                 | Defines how ARIA should be used correctly                            |
+| **Examples**  | `role`, `aria-label`, `aria-hidden`                                    | Same attributes but defined under WAI-ARIA standards                 |
+
+
+ 4) how arithemtic operators and concatenation work in browser
+
+Arithmetic Operators in Browser (JavaScript)
+
+In the browser, JavaScript performs arithmetic operations using arithmetic operators to calculate numeric values.
+
+Arithmetic Operators
+Operator	Operation
++	Addition
+-	Subtraction
+*	Multiplication
+/	Division
+%	Modulus (remainder)
+
+Example:
+
+let a = 10;
+let b = 5;
+
+console.log(a + b); // 15
+console.log(a - b); // 5
+console.log(a * b); // 50
+console.log(a / b); // 2
+console.log(a % b); // 0
+
+Concatenation in Browser (JavaScript)
+
+Concatenation means joining strings together.
+In JavaScript, the + operator is also used for concatenation.
+
+example:
+
+let firstName = "Anand";
+let lastName = "P";
+
+console.log(firstName + " " + lastName);
+// Output: Anand P
+
+Arithmetic vs Concatenation (Important Rule)
+
+ JavaScript decides based on data type
+
+Example:
+
+console.log(10 + 20);       // 30 (Addition)
+console.log("10" + "20");  // "1020" (Concatenation)
+console.log("10" + 20);    // "1020" (Concatenation)
+console.log(10 + "20");    // "1020" (Concatenation)
+console.log(10 - "5");     // 5 (Arithmetic, string converted to number)
+
+Key Rule
+
+If both operands are numbers → Arithmetic
+
+If any operand is a string → Concatenation (for +)
+
+Other operators (- * / %) convert strings to numbers automatically
+
+Browser Example with prompt():
+
+let a = prompt("Enter first number"); // string
+let b = prompt("Enter second number"); // string
+
+console.log(a + b); // Concatenation
+
+console.log(Number(a) + Number(b)); // Arithmetic addition.
+
+
+
+ 5) Behind the Screen: How the Web Works
+
+*. You Enter a URL in the Browser
+Example: https://example.com
+- https → protocol (secure communication)
+- example.com → domain name
+- /page → specific resource
+
+*. Browser Checks Cache First
+The browser checks:
+- Browser cache
+- DNS cache
+- Cookies
+- History
+
+*. DNS Converts Domain to IP Address
+Domain names like google.com are converted into IP addresses like 142.250.190.14.
+
+*. Browser Connects to the Server
+Connection is made using TCP to ensure correct data delivery.
+
+*. HTTPS Adds Security (SSL/TLS)
+TLS handshake encrypts communication between browser and server.
+
+*. Browser Sends an HTTP Request
+Example request:
+GET / HTTP/1.1
+Host: example.com
+
+*. Server Processes the Request
+Server may:
+- Load HTML/CSS/JS files
+- Run backend code
+- Query databases
+
+*. Server Sends an HTTP Response
+Example response:
+HTTP/1.1 200 OK
+Content-Type: text/html
+
+*. Browser Starts Rendering the Page
+- HTML → DOM
+- CSS → CSSOM
+- DOM + CSSOM → Render Tree
+- Layout calculation
+- Painting pixels
+- Display on screen
+
+*. JavaScript Adds Interactivity
+Example:
+button.onclick = () => alert("Hello!");
+
+*. Browser Makes More Requests
+Loads extra resources:
+- Images
+- CSS files
+- JS files
+- Fonts
+- APIs
+
+*. Continuous Communication (APIs)
+Modern websites use:
+- AJAX
+- Fetch API
+- WebSockets
+
+Summary Flow:
+1. User enters URL
+2. DNS finds IP
+3. TCP connection starts
+4. HTTPS secures connection
+5. Browser sends request
+6. Server processes request
+7. Server sends response
+8. Browser renders page
+9. JavaScript runs
+10. More resources load
+
+
+ 6) CDN (Content Delivery Network)
+
+Definition:
+A CDN stands for Content Delivery Network.
+
+A Content Delivery Network (CDN) is a group of servers located in different places around the world that work together to deliver website content faster and more efficiently to users.
+
+How CDN Works:
+Instead of loading data from one main server, a CDN delivers content from the nearest server to the user.
+
+Example:
+- Website server is in the USA
+- User is in India
+- CDN provides content from a nearby server in India or Asia
+So the website loads faster.
+
+What CDN Delivers:
+CDNs mainly deliver static files such as:
+- Images
+- Videos
+- CSS files
+- JavaScript files
+- Fonts
+
+Benefits of CDN:
+1. Faster Website Loading
+   Content comes from the closest server.
+
+2. Reduced Server Load
+   Main server does less work.
+
+3. Better Performance Worldwide
+   Users in different countries get fast access.
+
+4. Improved Security
+   CDNs help protect against attacks like DDoS.
+
+5. High Availability
+   If one server fails, another server works.
+
+Example of CDN Usage:
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+Common CDN Providers:
+- Cloudflare
+- Google CDN
+- AWS CloudFront
+- jsDelivr
+- Akamai
+
+
+ 7) DNS (Domain Name System)
+
+Definition:
+DNS stands for Domain Name System.
+
+DNS is like the phonebook of the internet. It converts human-friendly website names (domain names) into computer-friendly IP addresses.
+
+How DNS Works:
+When you type a website name like:
+www.google.com
+
+DNS translates it into an IP address like:
+142.250.190.14
+
+So your browser can find the correct server.
+
+Why DNS is Important:
+- Humans remember names easily (google.com)
+- Computers need IP addresses to connect
+- DNS helps browsers locate websites quickly
+
+Example:
+Typing:
+facebook.com
+
+DNS finds the IP address of Facebook’s server and connects you to the website.
+
+Key Point:
+Without DNS, you would have to type IP addresses instead of website names.
+
+
+
+
+
+
+
+
+
